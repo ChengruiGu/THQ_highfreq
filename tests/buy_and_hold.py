@@ -4,7 +4,7 @@ from rqalpha.apis import *
 # 在这个方法中编写任何的初始化逻辑。context对象将会在你的算法策略的任何方法之间做传递。
 def init(context):
     logger.info("init")
-    context.s1 = "000001.XSHE"
+    context.s1 = "000651.XSHE"
     update_universe(context.s1)
     # 是否已发送了order
     context.fired = False
@@ -28,3 +28,8 @@ def handle_bar(context, bar_dict):
         # order_percent并且传入1代表买入该股票并且使其占有投资组合的100%
         order_percent(context.s1, 1)
         context.fired = True
+        logger.info(bar_dict)
+
+
+def handle_tick(context, tick):
+    logger.info(tick['datetime'])

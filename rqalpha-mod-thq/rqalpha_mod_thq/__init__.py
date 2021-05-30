@@ -5,5 +5,5 @@ __config__ = {
 
 
 def load_mod():
-    from .mod import HelloWorldMod
-    return HelloWorldMod()
+    from .mod import thqDataMod
+    return thqDataMod()
