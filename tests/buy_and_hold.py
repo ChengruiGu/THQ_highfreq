@@ -33,3 +33,22 @@ def handle_bar(context, bar_dict):
 
 def handle_tick(context, tick):
     logger.info(tick['datetime'])
+    logger.info(tick['last'])
+
+
+# __config__ = {
+#     "base": {
+#         "start_date": "2020-10-09",
+#         "end_date": "2020-10-10",
+#         "frequency": "tick",
+#         "matching_type": "last",
+#         "benchmark": None,
+#         "accounts": {
+#             "stock": 1000000
+#         }
+#     },
+#     "extra": {
+#         "log_level": "verbose",
+#     },
+# }
+

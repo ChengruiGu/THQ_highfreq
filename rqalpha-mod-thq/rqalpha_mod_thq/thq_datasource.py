@@ -24,7 +24,7 @@ class THQDataSource(BaseDataSource):
         day = trading_date.__getattribute__('day')
         for i in range(len(df)):
             row = df.iloc[i]
-            dt = datetime.datetime(year, month, day, row["hour"], row["minute"], ["second"], 0)
+            dt = datetime.datetime(year, month, day, row["hour"], row["minute"], row["second"], 0)
             asks = row.loc[["a1_p", "a2_p", "a3_p", "a4_p", "a5_p"]].to_list()
             ask_vols = row.loc[["a1_v", "a2_v", "a3_v", "a4_v", "a5_v"]].to_list()
             bids = row.loc[["b1_p", "b2_p", "b3_p", "b4_p", "b5_p"]].to_list()
