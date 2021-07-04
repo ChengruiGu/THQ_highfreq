@@ -8,10 +8,11 @@ def init(context):
     update_universe(context.s1)
     # 是否已发送了order
     context.fired = False
+    context.count = 0
 
 
 def before_trading(context):
-    pass
+    context.count = 0
 
 
 # 你选择的证券的数据更新将会触发此段逻辑，例如日或分钟历史数据切片或者是实时数据切片更新
@@ -34,7 +35,8 @@ def handle_bar(context, bar_dict):
 def handle_tick(context, tick):
     logger.info(tick['datetime'])
     logger.info(tick['last'])
-
+    context.count += 1
+    logger.info(context.count)
 
 # __config__ = {
 #     "base": {

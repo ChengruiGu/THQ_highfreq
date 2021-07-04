@@ -4,3 +4,9 @@ rqalpha run -f tests\buy_and_hold.py -d E:\bundle\bundle\
 
 workable:
 rqalpha run -f tests\buy_and_hold.py -d E:\bundle\bundle\ -s 2020-10-9 -e 2020-10-10 -fq tick -mt last --account stock 100000 --benchmark 000300.XSHG
+
+rqalpha run -f tests\twoline1.py -d E:\bundle\bundle\ -s 2020-11-6 -e 2020-11-7 -fq tick -mt last --account stock 100000 --benchmark 000300.XSHG
+
+横截面（多股tick）
+下单成交条件 加列
+画图
